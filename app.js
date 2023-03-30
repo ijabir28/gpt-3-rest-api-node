@@ -1,5 +1,4 @@
 const express = require('express');
-const { Configuration, OpenAIApi } = require('openai');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
