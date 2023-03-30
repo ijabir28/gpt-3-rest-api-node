@@ -39,3 +39,15 @@ exports.grammar_correction = async function ({prompt}) {
         presence_penalty: 0.0
     });
 };
+
+exports.chat = async function ({role, content}) {
+
+    return await openai.createChatCompletion({
+        model: "gpt-3.5-turbo",
+        messages: [{role, content}],
+    });
+};
+
+exports.models = async function () {
+    return await openai.listModels();
+};
